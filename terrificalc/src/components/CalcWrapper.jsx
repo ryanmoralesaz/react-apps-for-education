@@ -1,37 +1,22 @@
 // CalculatorWrapper.jsx
-import "../css/calc-wrapper.css";
+import "../css/CalcWrapper.css";
 // import MrTerrific from "../assets/mr-terrific.jpeg";
 import { useState } from "react";
 import CalcButton from "./CalcButton.jsx";
+import buttonValues from "./buttonValues.js";
 
 function CalculatorWrapper() {
   const [output, setOutput] = useState("");
   const sendToOutput = (value) => {
     setOutput(output + value);
   };
-  const buttonValues = [
-    "1",
-    "2",
-    "3",
-    "4",
-    "5",
-    "6",
-    "7",
-    "8",
-    "9",
-    "CLEAR",
-    "0",
-    "ENTER",
-    "+",
-    "-",
-    "*",
-    "/",
-    "%",
-    ".",
-  ];
   return (
-    <div className="calculatorWrapper">
-      <div className="buttonWrapper">
+    <div className="calc-wrapper">
+      <div className="display-wrapper">
+        <div className="primary-display">{output}</div>
+        {/* <img className="calcAvatar" src={MrTerrific}></img>*/}
+      </div>
+      <div className="button-wrapper">
         {buttonValues.map((value, index) => (
           <CalcButton
             key={index}
@@ -40,10 +25,6 @@ function CalculatorWrapper() {
             index={index}
           ></CalcButton>
         ))}
-      </div>
-      <div className="displayWrapper">
-        <div className="primaryDisplay">{output}</div>
-        {/* <img className="calcAvatar" src={MrTerrific}></img>*/}
       </div>
     </div>
   );

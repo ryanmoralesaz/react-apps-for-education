@@ -1,5 +1,5 @@
 // CalcButton.jsx
-import "../css/calc-button.css";
+import "../css/CalcButton.css";
 
 function CalcButton({ textValue, sendToOutput, index }) {
   const animationDelay = `${index * 0.4}s`;

@@ -1,0 +1,21 @@
+const buttonValues = [
+  "1",
+  "2",
+  "3",
+  "4",
+  "5",
+  "6",
+  "7",
+  "8",
+  "9",
+  "CLEAR",
+  "0",
+  "ENTER",
+  "+",
+  "-",
+  "*",
+  "/",
+  "%",
+  ".",
+];
+export default buttonValues;
