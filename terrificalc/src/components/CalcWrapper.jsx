@@ -8,7 +8,20 @@ import buttonValues from "./buttonValues.js";
 function CalculatorWrapper() {
   const [output, setOutput] = useState("");
   const sendToOutput = (value) => {
-    setOutput(output + value);
+    switch (value.toLowerCase()) {
+      case ("enter"):
+        try {
+          setOutput(eval(output).toString());
+        } catch {
+          setOutput("error");
+        }
+        break;
+      case ("clear"):
+        setOutput("");
+        break;
+      default:
+        setOutput(output + value);
+    }
   };
   return (
     <div className="calc-wrapper">
