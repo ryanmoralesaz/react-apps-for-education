@@ -1,0 +1,31 @@
+/* calc-button.css */
+.calc-button {
+  display: flex;
+  place-items: center;
+  justify-content: center;
+  min-width: 10px;
+  min-height: 10px;
+  margin: 0px 20px;
+  background-color: aquamarine;
+  color: black;
+  font-weight: bold;
+  filter: drop-shadow(10px 5px 4px #dd4744);
+  border-radius: 2px;
+  animation: bounce 8s ease-in-out infinite;
+}
+
+@keyframes bounce {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  10% {
+    transform: translateY(-10px);
+  }
+
+  20% {
+    transform: translateY(0);
+  }
+}
